@@ -13,4 +13,4 @@ part there was such:
 
 Basically, the translation is "get a value of the formulae, where `x` and `y` are equal some stuff of `a` and `b`, where `a` and `b` are equal something..."
 
-If you try, you can't get a value, because there's negative value under any logarithm. So, if you compile without `-Ofast`, you shall get `nan`.
+If you try, you can't get a value, because there's negative value under any logarithm. So, if you compile without `-Ofast`, you shall get `nan` after all stuff written in root of the repo and then `./build/lab1` .
