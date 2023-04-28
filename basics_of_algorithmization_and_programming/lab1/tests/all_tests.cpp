@@ -17,5 +17,6 @@ TEST_CASE("area") {
     CHECK_THROWS_AS(auto smth = calc_area(0, -1.0, 0.0, 0.0), std::invalid_argument);
     CHECK_THROWS_AS(auto smth = calc_area(0, 0.0, -1.0, 0.0), std::invalid_argument);
     CHECK_THROWS_AS(auto smth = calc_area(0, 0.0, 0.0, -1.0), std::invalid_argument);
+    CHECK_THROWS_AS(auto smth = calc_area(0, 0.0, 0.0, PI*2), std::invalid_argument);
     CHECK(std::abs(calc_area(1,0,0,0) - 3.1415) < 0.0001);  
 }
