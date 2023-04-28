@@ -37,9 +37,9 @@ template <typename T = double, typename T2 = double, typename T3 = double,
         throw std::invalid_argument(
             "angle_between_sides_parallelogram must be positive");
     }
-    if (angle_between_sides_parallelogram >= PI / 2) {
+    if (angle_between_sides_parallelogram > PI) {
         throw std::invalid_argument(
-            "angle_between_sides_parallelogram must be less than PI/2");
+            "angle_between_sides_parallelogram must be less or equal than PI");
     }
     return PI * radius * radius -
            side_1_parallelogram * side_2_parallelogram *
