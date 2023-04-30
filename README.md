@@ -1,3 +1,5 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-personal-page.svg)](https://stand-with-ukraine.pp.ua)
+
 # second_uni
 
 This repo will have a code for my second uni. There's actually right now no interesting stuff, so you shouldn't carry about the repo.
