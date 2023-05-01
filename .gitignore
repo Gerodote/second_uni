@@ -45,7 +45,7 @@ _deps
 
 build/
 cmake_*_build/
-/.vscode
-/.cache
-/Testing
+.vscode/
+.cache/
+Testing/
 
