@@ -8,10 +8,10 @@
 #include <vector>
 
 int main() {
-  std::vector<int> numbers(25);
+  std::vector<double> numbers(25);
   std::random_device rd;
   std::mt19937 gen(rd());
-  std::uniform_int_distribution<> dist(1, 100);
+  std::uniform_real_distribution<double> dist(-1.0, 1.0);
 
   // Fill vector with random numbers
   std::generate(numbers.begin(), numbers.end(),
@@ -60,7 +60,7 @@ int main() {
   }
 
   std::string inputString;
-  std::cout << "Enter a string: ";
+  std::cout << "3.3: Enter a string: ";
   std::getline(std::cin, inputString);
 
   std::vector<std::string> words;
@@ -83,7 +83,7 @@ int main() {
             << percent << "%" << std::endl;
 
   std::string input_str;
-  std::cout << "Enter a string: ";
+  std::cout << "3.4 Enter a string: ";
   std::getline(std::cin, input_str);
 
   // Extract digits from the string and print them
