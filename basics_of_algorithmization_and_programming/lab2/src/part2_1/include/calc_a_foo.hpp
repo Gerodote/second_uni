@@ -4,7 +4,7 @@
 #include <cmath>
 #include <stdexcept>
 
-double calculateStuff(double x) {
+inline double calculateStuff(double x) {
     if (x >= 0 && x < 2) {
         return std::pow(5*x, 1.0/6.0) - (1 / std::tan(std::pow(x,4) / 4 ));
     }

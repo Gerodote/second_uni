@@ -8,7 +8,7 @@ enum class triangle_type {
     Bad
 };
 
-triangle_type determine_triangle_type(double a, double b, double c) {
+inline triangle_type determine_triangle_type(double a, double b, double c) {
     /**
      * @brief determines triangle type from its sides using cosine theorem. returns a triangle_type. 
      * 

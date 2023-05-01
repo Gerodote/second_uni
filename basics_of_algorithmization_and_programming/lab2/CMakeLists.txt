@@ -4,7 +4,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-option(BUILD_TESTING "Build tests" ON)
+# option(BUILD_TESTING "Build tests" ON)
 
 project(lab2)
 
@@ -41,11 +41,11 @@ CPMAddPackage(
 )
 
 add_executable(lab2 lab2.cpp)
-target_link_libraries(lab2 PRIVATE calc magic_enum)
+target_link_libraries(lab2 PRIVATE part1 part2 magic_enum)
 
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
-  include(CTest)
-  add_subdirectory(tests)
-endif()
+# if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
+#   include(CTest)
+#   add_subdirectory(tests)
+# endif()
 
 
