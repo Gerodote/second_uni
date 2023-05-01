@@ -1,3 +1,4 @@
+#include "boost/algorithm/string/constants.hpp"
 #include <algorithm>
 #include <array>
 #include <boost/algorithm/string.hpp>
@@ -63,10 +64,23 @@ int main() {
   std::getline(std::cin, inputString);
 
   std::vector<std::string> words;
-  boost::split(words, inputString, boost::is_any_of(" "));
+  boost::split(words, inputString, boost::is_any_of(" "),
+               boost::token_compress_on);
   int wordCount = words.size();
 
   std::cout << "Word count: " << wordCount << std::endl;
+
+  int numWordsWithSameFirstAndLastLetter = 0;
+  for (const auto &word : words) {
+    if (word.front() == word.back()) {
+      numWordsWithSameFirstAndLastLetter++;
+    }
+  }
+
+  double percent =
+      static_cast<double>(numWordsWithSameFirstAndLastLetter) / wordCount * 100;
+  std::cout << "Percentage of words with the same first and last letter: "
+            << percent << "%" << std::endl;
 
   std::string input_str;
   std::cout << "Enter a string: ";
